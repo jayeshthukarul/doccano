@@ -23,6 +23,9 @@ RUN apt-get update \
     libssl-dev=1.* \
  && apt-get clean
 
+RUN apt-get install unixodbc unixodbc-dev python-pyodbc libsqliteodbc
+
+
 WORKDIR /tmp
 COPY Pipfile* /tmp/
 
